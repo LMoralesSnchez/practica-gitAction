@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Pelicula {
+  id: ID!
+  nombre: String!
+  categoria: String!
+  estado: Boolean!
+}
+
+type Query {
+  peliculas(id: ID!): Pelicula!
+}
+
+type Mutation {
+  createPelicula(createPeliculaInput: CreatePeliculaInput!): Pelicula!
+  updatePelicula(updatePeliculaInput: UpdatePeliculaInput!): Pelicula!
+  removePelicula(id: ID!): Pelicula!
+}
+
+input CreatePeliculaInput {
+  nombre: String!
+  categoria: String!
+  estado: Boolean!
+}
+
+input UpdatePeliculaInput {
+  nombre: String
+  categoria: String
+  estado: Boolean
+  id: ID!
+}
